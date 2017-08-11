@@ -1,0 +1,29 @@
+item = health effect = transformation = transformation-Energy requirements = found in .. = rarity = extra
+Wood = 0 = Timber, Campfire, Tools, Fence = Dagger-10 Energy, Dagger-10 Energy, Rope-20 Energy = Wild = Common = very valuable
+Rope = 0 = Fishing rod, Trap, Bag, Tent, Fence = Wood, Wood, Tarp-Wood, Wood = Crafting = N/A = Has to be crafted
+Cloth = 0 = Bandages = 5 Energy = Start = Common = your clothes can be ripped to provide cloth
+Wild berries = random = None = None = Wild = Common = Unpredictitable health effect
+Raw chicken = -random = Cooked chicken = campfire = Grassland = Negitive health effect
+Water Bottles
+Flashlights
+MultiTool
+Knife 
+Emergency food
+First Aid Kit
+Compass
+Backpack
+Map
+Duct Tape
+Lighter
+Waterproof Matches = 0 = campfire = time
+Tarp
+Axe
+Shovel
+Paracord
+Timber
+Magnesium Fire Starter
+Trash Bags
+Binoculars
+Energy Bars
+Survival Book
+Fence = 0 =  = ,Crafting = Can hold chickens
