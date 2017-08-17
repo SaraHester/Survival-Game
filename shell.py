@@ -19,6 +19,18 @@ def input_choice(number, string):
                 sep='')
 
 
+def checker(string):
+    choice = input_choice(
+        3, "\n\t\tAre you sure you want to {}?\n\t\t1.Yes\n\t\t2.No\n\t\t\t->".
+        format(string))
+    if choice == '1':
+        return True
+    elif choice == '2':
+        return False
+    else:
+        return None
+
+
 def pretty_found(found_items):
     print("\n\t\tItems that can be FOUND")
     for item in found_items:
@@ -55,11 +67,11 @@ def pretty_crafting(crafting_items):
 
 
 def scavage(player, found_items, inventory):
-    if player['energy'] > 20:
+    if player['energy'] > 20 and checker("scavage"):
         found = core.scavage(player, found_items)
-        disk.append_inventory1(found, player['name'])
+        disk.append_inventory(core.convert_item_to_str(found), player['name'])
         player['energy'] -= 20
-        inventory.append(core.convert_found_into_string(found))
+        inventory.append(found)
         print("\t\t\tYou have found", found['name'])
         print("\n\t\tYour energy is now:", player['energy'])
     else:
@@ -83,6 +95,8 @@ def craft(inventory, crafting_items, player):
                         0, len(crafting_items[int(choice)]['requirements'])):
                     print("\t\t" +
                           crafting_items[int(choice)]['requirements'][i])
+                if checker("craft this") and choice in inventory:
+                    print(inventory)
             leave = input_choice(
                 3, "\n\t\t1.Keep Crafting\n\t\t2.Go back\n\t\t\t->")
             print("\n\t\t\t\tHaven't got this far")
@@ -101,7 +115,8 @@ def choose_start_package(start_items, inventory, player):
             4,
             '\n\t\tWhat bag would you like to start with?\n\t\t1, 2, or 3\n\t\t\t->'
         )
-        bag, items = core.random_bag(start_items)
+        disk.append_inventory(core.always_items(start_items), player['name'])
+        bag = core.random_bag(core.convert_inventory_to_str(start_items))
         disk.append_inventory(bag, player['name'])
         print("\n\t\tBag", number, "Chosen\n\nYou have acquired", bag)
     else:
@@ -140,11 +155,7 @@ def play(player):
         elif start == '4':
             print_inventory(inventory)
         elif start == '5':
-            choice = input_choice(
-                3,
-                "\n\t\tAre you sure you want to clear the game.\n\t\tIT WILL BE LOST FOREVER\n\t\t1.Yes\n\t\t2.No\n\t\t\t->"
-            )
-            if choice == '1':
+            if checker("clear the inventory. THIS WILL RESET THE GAME"):
                 disk.make_new_file(player['name'])
                 print("\t\t\tExiting...")
                 # time.sleep(2)

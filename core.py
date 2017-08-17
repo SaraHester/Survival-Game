@@ -11,15 +11,12 @@ import random
 def convert_inventory_to_str(inventory):
     new = ''
     for item in inventory:
-        new += convert_found_into_string(inventory[item])
+        new += convert_item_to_str(inventory[item])
     return new
 
 
-def convert_found_into_string(found):
-    string = '\n' + str(found['name']) + ' = ' + str(
-        found['effect']) + ' = ' + str(found['found']) + ' = ' + str(
-            found['rarity']) + ' = ' + str(found['extra'])
-    return string
+def convert_item_to_str(item):
+    return item['name'] + ', ' + str(1)
 
 
 def convert_start_into_string(start):
@@ -29,19 +26,24 @@ def convert_start_into_string(start):
     return string1
 
 
+def always_items(start_items):
+    items = ''
+    for line in start_items:
+        if start_items[line]['rarity'] == 'Always':
+            items += "\n" + start_items[line]['name'] + ', ' + str(2)
+    return items
+
+
 def random_bag(start_items):
     bag = ''
     choices = []
-    items = ''
     for line in start_items:
         if start_items[line]['rarity'] != 'Always':
             choices.append(start_items[line])
-        else:
-            items += "\n" + line
     for i in range(0, 6):
-        item = convert_start_into_string(random.choice(choices))
-        bag += "\n" + item
-    return bag, items
+        item = random.choice(choices)
+        bag += "\n" + start_items[line]['name'] + ', ' + str(2)
+    return bag
 
 
 def rest(player):

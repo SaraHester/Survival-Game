@@ -82,11 +82,6 @@ def open_inventory(name):
     return dictionary
 
 
-def append_inventory1(found, name):
-    with open('Users/{}inventory.txt'.format(name), 'a') as file5:
-        file5.write(core.convert_found_into_string(found))
-
-
 def append_inventory(text, name):
     with open('Users/{}inventory.txt'.format(name), 'a') as file6:
         file6.write(text)

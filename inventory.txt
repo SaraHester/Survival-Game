@@ -1,0 +1,13 @@
+
+
+Binoculars = 0 = {'None': 'None'} = Uncommon = Increases chance of rare items
+
+Waterproof Matches = 0 = {'Campfire': 'Timber'} = Common = Only has 10 uses
+
+Trash Bags = 0 = {'Tent/Raincatcher': 'Rope-Wood-30 Energy/Rope-Wood-10 Energy'} = Common = Given at start
+
+Cloth = 0 = {'Bandages': '5 Energy'} = Common = your clothes can be ripped to provide cloth
+
+First Aid Kit = +20 = {'None': 'None'} = Common = Fixes any minor injury
+
+Binoculars = 0 = {'None': 'None'} = Uncommon = Increases chance of rare items
