@@ -1,0 +1,5 @@
+item = effect = found in ..   = rarity = extra
+Wood = 0 = Wild = Common = very valuable
+Wild berries = random = Wild = Common = Unpredictitable health effect
+Raw chicken = -random =  Grassland = Common = Negative health effect
+Timber = 0 = Wild = Common = Can be found or made

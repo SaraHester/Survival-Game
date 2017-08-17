@@ -1,0 +1,19 @@
+item = effecti = consumbable? = rarity = extra
+Trash Bags = 0 = True = Common = Useless unless transformed
+Binoculars = 0 = False = Rare = Increases chance of rare items
+Energy Bars = +10 Energy = True = Common = Only use in extreme conditions
+Survival Book = 0 = True = Always = tear pages to make timber
+Cloth = 0 = True = Always = your clothes can be ripped to provide cloth
+Water Bottles = +5 = False = Always = Neccessary item
+Flashlights = 0 = False = Rare = Provides light
+Dagger = 0 = False = Always = Main tool given to you at Start
+Emergency food = +15 = True = Uncommon = Use only it in extreme conditions
+First Aid Kit = +20 = True = Common = Fixes any minor injury
+Compass = 0 = False = Always = Given at start
+Backpack = 0 = False = Always = Carries all of your items
+Map = 0 = False = Always = Given at start
+Duct Tape = 0 = True = Rare = Can fix almost anything
+Lighter = 0 = True = Rare = Only has 5 uses
+Waterproof Matches = 0 = True = Common = Only has 10 uses
+Tarp = 0 = True = Common = Can only transform twice
+Paracord = 0 = True = Very Rare = Transform once

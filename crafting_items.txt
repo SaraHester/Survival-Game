@@ -1,0 +1,11 @@
+item, requirement, extra
+Rope = Cloth/Vines = Hardest to craft
+Axe = Wood, Dagger = Can cut wood easier
+Shovel = Wood, Dagger =  Can dig easier
+Fence = Wood, Rope = Can hold chickens
+Timber = Wood, Dagger = Main purpose: Aid fire
+Fishing rod = Rope, Wood = Helps catch fish
+Trap = Rope, Wood = Helps catch small wildlife
+Bag = Rope, Trashbag/Cloth = Not very useful unless overencumbered
+Tent = Wood, Rope, Trashbag/Cloth = Health increases by 10% while resting
+Campfire = Timber, Wood, Lighter/Waterproof Matches = Can be used to cook raw food
